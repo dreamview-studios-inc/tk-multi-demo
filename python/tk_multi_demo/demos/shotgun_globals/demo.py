@@ -11,7 +11,7 @@
 import sgtk
 from sgtk.platform.qt import QtCore, QtGui
 
-# import the shotgun model module from shotgunutils framework
+# import the sg model module from shotgunutils framework
 shotgun_globals = sgtk.platform.import_framework(
     "tk-framework-shotgunutils", "shotgun_globals")
 
@@ -60,7 +60,7 @@ class ShotgunGlobalsDemo(QtGui.QWidget):
 
         # --- query some data
 
-        # query the full site schema from shotgun
+        # query the full site schema from sg
         self._schema = self._app.shotgun.schema_read()
 
         # --- build the ui components

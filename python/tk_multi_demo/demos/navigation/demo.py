@@ -169,7 +169,7 @@ class _HierarchyItemBreadcrumb(navigation.Breadcrumb):
 
 
 def _get_item_label(item):
-    """Get a display label for a shotgun hierarchy item."""
+    """Get a display label for a sg hierarchy item."""
 
     if item.kind() == "entity":
         label = "<strong>%s</strong> %s" % (item.entity_type(), item.text())

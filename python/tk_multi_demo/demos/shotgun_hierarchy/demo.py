@@ -15,7 +15,7 @@ from sgtk.platform.qt import QtCore, QtGui
 overlay = sgtk.platform.import_framework(
     "tk-framework-qtwidgets", "overlay_widget")
 
-# import the shotgun fields module from qtwidgets.
+# import the sg fields module from qtwidgets.
 shotgun_fields = sgtk.platform.import_framework(
     "tk-framework-qtwidgets", "shotgun_fields")
 
@@ -23,7 +23,7 @@ shotgun_fields = sgtk.platform.import_framework(
 views = sgtk.platform.import_framework(
     "tk-framework-qtwidgets", "views")
 
-# import the shotgun model module from shotgunutils framework
+# import the sg model module from shotgunutils framework
 shotgun_model = sgtk.platform.import_framework(
     "tk-framework-shotgunutils", "shotgun_model")
 
@@ -54,7 +54,7 @@ class ShotgunHierarchyDemo(QtGui.QWidget):
             "entities."
         )
 
-        # the field manager handles retrieving widgets for shotgun field types
+        # the field manager handles retrieving widgets for sg field types
         self._fields_manager = shotgun_fields.ShotgunFieldManager(
             self, bg_task_manager=self._bg_task_manager)
 
@@ -128,7 +128,7 @@ class ShotgunHierarchyDemo(QtGui.QWidget):
         # set the proxy model as the data source for the view
         self._hierarchy_view.setModel(self._hierarchy_proxy_model)
 
-        # create a simple shotgun model for querying the versions
+        # create a simple sg model for querying the versions
         self._version_model = shotgun_model.SimpleShotgunModel(
             self, bg_task_manager=self._bg_task_manager)
 
@@ -163,7 +163,7 @@ class ShotgunHierarchyDemo(QtGui.QWidget):
         )
 
         # the item will be a ShotgunHierarchyItem. Access the data necessary
-        # to load data for the shotgun model
+        # to load data for the sg model
         try:
             target_entities = selected_item.target_entities()
         except AttributeError, e:
@@ -175,7 +175,7 @@ class ShotgunHierarchyDemo(QtGui.QWidget):
             return
 
         # if we're here we have a hierarchy item. query the versions under
-        # the selected point in the SG hierarchy. the shotgun model will handle
+        # the selected point in the SG hierarchy. the sg model will handle
         # caching as the user clicks a previously selected item in the hierarchy
         self._version_model.load_data(
             target_entities.get("type"),

@@ -14,7 +14,7 @@ import sgtk
 shotgun_fields = sgtk.platform.import_framework(
     "tk-framework-qtwidgets", "shotgun_fields")
 
-# the default shotgun fields checkbox widget
+# the default sg fields checkbox widget
 DefaultCheckBoxWidget = shotgun_fields.checkbox_widget.CheckBoxWidget
 
 
@@ -38,6 +38,6 @@ class MyProjectFavoritesWidget(DefaultCheckBoxWidget):
     # define which specific entities & fields this widget should be used for
     _ENTITY_FIELDS = [("Project", "current_user_favorite")]
 
-    # NOTE: Here we are subclassing the default shotgun fields check box
+    # NOTE: Here we are subclassing the default sg fields check box
     # widget and applying a different style to it (see the demo's style.qss
     # file).

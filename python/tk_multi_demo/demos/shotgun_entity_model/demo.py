@@ -11,7 +11,7 @@
 import sgtk
 from sgtk.platform.qt import QtCore, QtGui
 
-# import the shotgun model module from shotgunutils framework
+# import the sg model module from shotgunutils framework
 shotgun_model = sgtk.platform.import_framework(
     "tk-framework-shotgunutils", "shotgun_model")
 

@@ -18,7 +18,7 @@ description:
     demo and QA of app building blocks available in shotgunutils and qtwidgets
     frameworks
 
-documentation_url: http://developer.shotgunsoftware.com/tk-framework-qtwidgets/shotgun_menus.html#shotgun-menu
+documentation_url: http://developer.shotgunsoftware.com/tk-framework-qtwidgets/shotgun_menus.html#sg-menu
 
 frameworks:
     - {"name": "tk-framework-qtwidgets", "version": "v2.x.x"}

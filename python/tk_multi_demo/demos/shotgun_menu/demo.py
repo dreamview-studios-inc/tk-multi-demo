@@ -30,7 +30,7 @@ class ShotgunMenuDemo(QtGui.QWidget):
         # call the base class init
         super(ShotgunMenuDemo, self).__init__(parent)
 
-        # --- build a shotgun menu
+        # --- build a sg menu
 
         sg_menu = shotgun_menus.ShotgunMenu(self)
         submenu = shotgun_menus.ShotgunMenu(self)
